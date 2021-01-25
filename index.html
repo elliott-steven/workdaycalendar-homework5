@@ -14,13 +14,85 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!--This is my own css stylesheet-->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <title>Homework 4 - Code Quiz</title>
+    <title>Work Day Calendar - Homework 5</title>
 </head>
 
 <body>
+    <!--This is for calendar-->
+    <header class="jumbotron">
+        <h1>Work Day Calendar</h1>
+        <p>Creating a simple calendar app for scheduling your work day.</p>
+        <p id="currentDay"></p>
+    </header>
+    <!-- Calendar time blocks will go here -->
+    <div class="container">
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">8 AM</div>
+            <textarea id="8" class="taskNote col-md-6">Please enter your task here</textarea>
+            <button class="saveBtn col-md-2">Save me</button>
 
+        </div>
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">9 AM</div>
+            <textarea id="9" class="taskNote col-md-6">Please enter your task here</textarea>
+            <button class="saveBtn col-md-2">Save me</button>
 
+        </div>
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">10 AM</div>
+            <textarea id="10" class="taskNote col-md-6">Please enter your task here</textarea>
+            <button class="saveBtn col-md-2">Save me</button>
 
+        </div>
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">11 AM</div>
+            <textarea id="11" class="taskNote col-md-6">Please enter your task here</textarea>
+            <button class="saveBtn col-md-2">Save me</button>
+
+        </div>
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">12 PM</div>
+            <textarea id="12" class="taskNote col-md-6">Please enter your task here</textarea>
+            <button class="saveBtn col-md-2">Save me</button>
+
+        </div>
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">1 PM</div>
+            <textarea id="13" class="taskNote col-md-6">Please enter your task here</textarea>
+            <button class="saveBtn col-md-2">Save me</button>
+
+        </div>
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">2 PM</div>
+            <textarea id="14" class="taskNote col-md-6">Please enter your task here</textarea>
+            <button class="saveBtn col-md-2">Save me</button>
+
+        </div>
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">3 PM</div>
+            <textarea id="15" class="taskNote col-md-6">Please enter your task here</textarea>
+            <button class="saveBtn col-md-2">Save me</button>
+
+        </div>
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">4 PM</div>
+            <textarea id="16" class="taskNote col-md-6">Please enter your task here</textarea>
+            <button class="saveBtn col-md-2">Save me</button>
+
+        </div>
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">5 PM</div>
+            <textarea id="17" class="taskNote col-md-6">Please enter your task here</textarea>
+            <button class="saveBtn col-md-2">Save me</button>
+
+        </div>
+
+    </div>
+    </div>
 </body>
-
+<!--JQuery CDN-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--Luxon DateTime-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<!--My javasript source-->
+<script src="./javascript/script.js"></script>
