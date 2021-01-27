@@ -1,52 +1,53 @@
-let today = moment().format('MMMM Do YYYY');
-let dayOfWeek = moment().format('dddd');
-let thisHour = moment().hour();
+//Make sure document is loaded before starting
+$(document).ready(function() {
 
-let todoArray = [];
+//This will pull the local date for me
+    $("#currentDay").text(moment().format("MMMM Do, YYYY"));
 
-$('#currentDay').text(dayOfWeek + ' ' + today);
+//This should pull the hour for each time block and change color
+    function updateColor() {
+        var currentHour = (moment().format("H"));
+            console.log(currentHour);
 
-for (i = 9; i < 18; i++) {
-    if (parseInt($('#' + i).attr('id')) < thisHour) {
-        $('#' + i).attr('style', 'background-color: #dddddd');
-    } else if (parseInt($('#' + i).attr('id')) > thisHour) {
-        $('#' + i).attr('style', 'background-color: #ffffff');
-    } else {
-        $('#' + i).attr('style', 'background-color: #fff78a')
-    }
-}
+        $(".timeBlock").each(function() {
+            var time = parseInt($(this).attr("id"));
+            console.log(time);
+            
+            if (time > currentHour) {
+            $(this).addClass("future");
+            }
+            
+            else if (time < currentHour) {
+            $(this).addClass("past");
+            }
+            
+            else {
+            $(this).addClass("present");
+            };
+        });
+    };
 
-$('.save').on('click', function() {
-    todoArray = [];
+    updateColor();
 
-    for (i = 9; i < 18; i++) {
-        let todoValue = $('#' + i).val();
+// This will be produce a save event for each of my time block rows
+    $(".saveBtn").on("click", function() {
+        var time = $(this).parent().attr("id");
+        var value = $(this).siblings(".myTask").val();
 
-        let todoObject = {
-            todoHour: i,
-            todoItem: todoValue
-        }
+        localStorage.setItem(time, value);
+    })
 
-        todoArray.push(todoObject);
+    $("#8 .myTask").val(localStorage.getItem("8"));
+    $("#9 .myTask").val(localStorage.getItem("9"));
+    $("#10 .myTask").val(localStorage.getItem("10"));
+    $("#11 .myTask").val(localStorage.getItem("11"));
+    $("#12 .myTask").val(localStorage.getItem("12"));
+    $("#13 .myTask").val(localStorage.getItem("13"));
+    $("#14 .myTask").val(localStorage.getItem("14"));
+    $("#15 .myTask").val(localStorage.getItem("15"));
+    $("#16 .myTask").val(localStorage.getItem("16"));
+    $("#17 .myTask").val(localStorage.getItem("17"));
+    $("#18 .myTask").val(localStorage.getItem("18"));
+});
 
-        localStorage.setItem("todo", JSON.stringify(todoArray));
-    }
-})
-
-$('#clear-button').on('click', function() {
-    localStorage.clear();
-    $('textarea').val('');
-})
-
-function loadTodos() {
-    let storedTodos = JSON.parse(localStorage.getItem("taskNote"));
-    console.log(storedTodos);
-
-    if (storedTodos !== null) {
-        for (i = 0; i < storedTodos.length; i++) {
-            $('#' + storedTodos[i].todoHour).val(storedTodos[i].todoItem);
-        };
-    }
-}
-
-loadTodos();
+// 

@@ -21,78 +21,75 @@
     <!--This is for calendar-->
     <header class="jumbotron">
         <h1>Work Day Calendar</h1>
-        <p>Creating a simple calendar app for scheduling your work day.</p>
-        <p id="currentDay"></p>
+        <p>Here is a simple calendar app for scheduling your work day</p>
+        <div id="currentDay" class="todaysDate">Today's date</div>
     </header>
-    <!-- Calendar time blocks will go here -->
+
+    <!-- Calendar time blocks from 8am-6pm will go here -->
     <div class="container">
-        <div class="row">
-            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">8 AM</div>
-            <textarea id="8" class="taskNote col-md-6">Please enter your task here</textarea>
-            <button class="saveBtn col-md-2">Save me</button>
-
+        <div class="row timeBlock" id="8">
+            <label class="hour col-md-1">8 AM</label>
+            <textarea class="myTask col-md-9"></textarea>
+            <button class="saveBtn col-md-2" data-time="8">Save Task</button>
         </div>
-        <div class="row">
-            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">9 AM</div>
-            <textarea id="9" class="taskNote col-md-6">Please enter your task here</textarea>
-            <button class="saveBtn col-md-2">Save me</button>
-
+        <div class="row timeBlock" id="9">
+            <label class="hour col-md-1">9 AM</label>
+            <textarea class="myTask col-md-9"></textarea>
+            <button class="saveBtn col-md-2" data-time="9">Save Task</button>
         </div>
-        <div class="row">
-            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">10 AM</div>
-            <textarea id="10" class="taskNote col-md-6">Please enter your task here</textarea>
-            <button class="saveBtn col-md-2">Save me</button>
-
+        <div class="row timeBlock" id="10">
+            <label class="hour col-md-1">10 AM</label>
+            <textarea class="myTask col-md-9"></textarea>
+            <button class="saveBtn col-md-2" data-time="10">Save Task</button>
         </div>
-        <div class="row">
-            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">11 AM</div>
-            <textarea id="11" class="taskNote col-md-6">Please enter your task here</textarea>
-            <button class="saveBtn col-md-2">Save me</button>
-
+        <div class="row timeBlock" id="11">
+            <label class="hour col-md-1">11 AM</label>
+            <textarea class="myTask col-md-9"></textarea>
+            <button class="saveBtn col-md-2" data-time="11">Save Task</button>
         </div>
-        <div class="row">
-            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">12 PM</div>
-            <textarea id="12" class="taskNote col-md-6">Please enter your task here</textarea>
-            <button class="saveBtn col-md-2">Save me</button>
-
+        <div class="row timeBlock" id="12">
+            <label class="hour col-md-1">12 PM</label>
+            <textarea class="myTask col-md-9"></textarea>
+            <button class="saveBtn col-md-2" data-time="12">Save Task</button>
         </div>
-        <div class="row">
-            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">1 PM</div>
-            <textarea id="13" class="taskNote col-md-6">Please enter your task here</textarea>
-            <button class="saveBtn col-md-2">Save me</button>
-
+        <div class="row timeBlock" id="13">
+            <label class="hour col-md-1">1 PM</label>
+            <textarea class="myTask col-md-9"></textarea>
+            <button class="saveBtn col-md-2" data-time="13">Save Task</button>
         </div>
-        <div class="row">
-            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">2 PM</div>
-            <textarea id="14" class="taskNote col-md-6">Please enter your task here</textarea>
-            <button class="saveBtn col-md-2">Save me</button>
-
+        <div class="row timeBlock" id="14">
+            <label class="hour col-md-1">2 PM</label>
+            <textarea class="myTask col-md-9"></textarea>
+            <button class="saveBtn col-md-2" data-time="14">Save Task</button>
         </div>
-        <div class="row">
-            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">3 PM</div>
-            <textarea id="15" class="taskNote col-md-6">Please enter your task here</textarea>
-            <button class="saveBtn col-md-2">Save me</button>
-
+        <div class="row timeBlock" id="15">
+            <label class="hour col-md-1">3 PM</label>
+            <textarea class="myTask col-md-9"></textarea>
+            <button class="saveBtn col-md-2" data-time="15">Save Task</button>
         </div>
-        <div class="row">
-            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">4 PM</div>
-            <textarea id="16" class="taskNote col-md-6">Please enter your task here</textarea>
-            <button class="saveBtn col-md-2">Save me</button>
-
+        <div class="row timeBlock" id="16">
+            <label class="hour col-md-1">4 PM</label>
+            <textarea class="myTask col-md-9"></textarea>
+            <button class="saveBtn col-md-2" data-time="16">Save Task</button>
         </div>
-        <div class="row">
-            <div class="d-flex justify-content-center align-items-center col-md-2 timeBlock">5 PM</div>
-            <textarea id="17" class="taskNote col-md-6">Please enter your task here</textarea>
-            <button class="saveBtn col-md-2">Save me</button>
-
+        <div class="row timeBlock" id="17">
+            <label class="hour col-md-1">5 PM</label>
+            <textarea class="myTask col-md-9"></textarea>
+            <button class="saveBtn col-md-2" data-time="17">Save Task</button>
         </div>
-
-    </div>
+        <div class="row timeBlock" id="18">
+            <label class="hour col-md-1">6 PM</label>
+            <textarea class="myTask col-md-9"></textarea>
+            <button class="saveBtn col-md-2" data-time="18">Save Task</button>
+        </div>
     </div>
 </body>
+
 <!--JQuery CDN-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!--Luxon DateTime-->
+<!--Moment CDN-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <!--My javasript source-->
 <script src="./javascript/script.js"></script>
+
+</html>
