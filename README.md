@@ -34,4 +34,4 @@ THEN the saved events persist
 
 The following animation demonstrates the application functionality:
 
-![day planner screenshot](./img/screenshot.png)
+The day planner screenshot can be found here. (./img/screenshot.png)
