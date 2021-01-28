@@ -20,7 +20,7 @@ $(document).ready(function() {
             else if (time < currentHour) {
             $(this).addClass("past");
             }
-            
+
             else {
             $(this).addClass("present");
             };
@@ -50,6 +50,7 @@ $(document).ready(function() {
     $("#18 .myTask").val(localStorage.getItem("18"));
     
     // Testing later hours $("#21 .myTask").val(localStorage.getItem("21"));
+    // Testing later hours $("#22 .myTask").val(localStorage.getItem("22"));
 });
 
 
