@@ -5,17 +5,18 @@ body {
 }
 
 h1 {
-    font-size: 64px;
+  font-size: 64px;
 }
+
 textarea{
-  background: transparent;
+  background:transparent;
   color: #000000;
   border-left: 1px solid black;
   padding: 8px;
 }
 
 .todaysDate {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 .jumbotron {
@@ -41,7 +42,7 @@ textarea{
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #afadad;
   color: white;
 }
 
